@@ -1,0 +1,66 @@
+html{
+    overflow-x: hidden;
+}
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form input:hover {
+  border-color:  #c50000;
+  box-shadow: 0 0 5px  #c50000;
+  outline: none;
+}
+
+form button {
+  padding: 10px;
+  background-color:  #c60000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color:  #c50000;
+}
+.create-client{
+  background-color:#c60000;
+   color: white;
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius:4px;
+
+}
+.create-client{
+  background-color:#c50000;
+   color: white;
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius:4px;
+      height:100%;
+
+}
+.Add-Client{
+       background-color: #c60000; 
+              color: white;
+              padding: 10px;
+              font-size: 1rem;
+              cursor: pointer;
+              border: none;
+              border-radius: 4px;
+}
+.Add-Client:hover{
+background-color:rgb(152, 10, 10);
+  /* transform: scale(1.05); */
+  box-shadow: 0 0 20px rgb(207, 202, 202);
+  transition:all 0.3s ease
+}

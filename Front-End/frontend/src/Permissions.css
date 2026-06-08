@@ -1,0 +1,214 @@
+/* MAIN CONTAINER */
+.permissions-container {
+  width: 86%;
+  margin-left: 14%;
+  padding: 25px 35px;
+  background: #f4f5f7;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* TITLE */
+h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 25px;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+/* ROLE SELECTOR */
+.role-selector {
+  margin-bottom: 22px;
+}
+
+.role-selector label {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+select#role {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ------------------------------------------------------ */
+/*   🔥 TWO CATEGORIES PER ROW                            */
+/* ------------------------------------------------------ */
+
+.permissions-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 10fr);   /* three per row */
+  gap: 30px;
+  margin-top: 20px;
+}
+
+
+/* CATEGORY CARD */
+.permission-category {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+ 
+}
+
+/* CATEGORY TITLE */
+/* CATEGORY TITLE */
+.permission-category h3 {
+  font-size: 1.1rem; /* smaller than 1.35rem */
+  margin-bottom: 12px;
+  font-weight: 800;
+  color: #c60000;
+  border-bottom: 2px solid #c60000;
+  padding-bottom: 6px;
+}
+
+/* SUBCATEGORY TITLE */
+.permission-category .subcategory h4 {
+  font-size: 0.95rem; /* smaller font for subcategories */
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #a00000;
+}
+
+.permission-category .checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ✅ two per row */
+  gap: 10px 15px; /* vertical + horizontal spacing */
+}
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.checkbox-item:hover {
+  background: #f5dcdc;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  accent-color: #c60000;
+}
+
+.checkbox-item label {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+/* SUBMIT BUTTON */
+
+.submit-button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 8px;
+  background: #c60000;
+  color: white;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #a00000;
+  box-shadow: 0 5px 14px rgba(198, 0, 0, 0.4);
+}
+
+.status-message {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #c60000;
+}
+.mode-toggle-box {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.toggle-buttons button {
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.toggle-buttons button.active-mode {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+.toggle-buttons button:nth-child(2).active-mode {
+  background: #28a745;
+}
+.selector-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.role-selector label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: #fff;
+  transition: all 0.3s ease;
+  appearance: none; /* Remove default arrow in some browsers */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.custom-select option {
+  padding: 10px;
+}
+
+.role-selector {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.role-selector::after {
+  content: "▾";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 14px;
+  color: #666;
+}

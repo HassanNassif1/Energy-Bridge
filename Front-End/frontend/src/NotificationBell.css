@@ -1,0 +1,149 @@
+.notification-container {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+
+.bell-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bell-icon {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.modal {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  width: 350px;
+  max-height: 450px;
+  overflow-y: auto;
+  box-shadow: 0px 2px 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  animation: slide-down 0.2s ease-out;
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  background-color: #f5f5f5;
+}
+
+.modal-header h4 {
+  margin: 0;
+}
+
+.close-btn, .mark-read-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.mark-read-btn {
+  color: #007bff;
+}
+
+.modal-body {
+  padding: 10px 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 12px 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: background 0.2s;
+}
+
+.notification-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Status-based colors */
+.notification-open {
+  background-color: #fff3cd; /* light orange */
+  border-left: 4px solid #ffa500;
+}
+
+.notification-in-progress {
+  background-color: #cce5ff; /* light blue */
+  border-left: 4px solid #007bff;
+}
+
+.notification-pending {
+  background-color: #f8d7da; /* light red */
+  border-left: 4px solid #dc3545;
+}
+
+.ticket-summary-box {
+  display: flex;
+  gap: 8px;
+  padding: 8px 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  border-radius: 0 0 8px 8px;
+}
+
+.summary-item {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.summary-item.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.summary-item.progress {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.summary-item.closed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.no-notifications {
+  text-align: center;
+  color: #888;
+  padding: 20px 0;
+}

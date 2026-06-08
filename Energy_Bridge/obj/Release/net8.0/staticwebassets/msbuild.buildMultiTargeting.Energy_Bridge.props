@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Energy_Bridge.props" />
+</Project>

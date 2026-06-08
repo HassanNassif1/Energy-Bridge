@@ -1,0 +1,181 @@
+/* Table container card */
+.ticket-table-container {
+  background-size: 100% 100%;
+  border-collapse: collapse !important;
+    border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  padding: 1.5rem;
+  transition: all 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+.ticket-table-container table,
+.ticket-table-container td,
+.ticket-table-container th {
+  border: none !important;
+}
+/* Table styles */
+.ticket-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table td {
+  background: transparent; /* let the table’s gradient show */
+}
+.ticket-table tbody td {
+  background: #ffffff !important;
+  color: #111827;
+}
+/* Table header */
+.ticket-table thead th {
+   background:#c60000!important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 2px solid #e5e7eb;
+  white-space: nowrap;       /* prevent wrapping */
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Table body cells */
+.ticket-table td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 15px;
+  color: #111827;
+}
+
+.ticket-table-container table,
+.ticket-table-container td,
+.ticket-table-container th,
+.ticket-table-container tr {
+  background: transparent !important;
+  border: none !important;
+  border-collapse: collapse !important;
+}
+
+/* Hover effect for rows */
+.ticket-table tbody tr:hover {
+  background-color: #f3f4f6;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+
+
+
+/* Assigned role badges */
+.assigned-role-badge {
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+  color: #0369a1;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  transition: all 0.3s;
+}
+
+/* Actions buttons */
+.ticket-table .action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ticket-table .action-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Responsive scroll */
+@media (max-width: 1024px) {
+  .ticket-table-container {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+  .ticket-table th,
+  .ticket-table td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+/* Status badges */
+/* Status badges */
+.status-badge {
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 75px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Animated dot */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: pulse 1.2s infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0.6; }
+}
+
+/* Status Colors */
+.status-open {
+  background-color: #dcfce7; /* Light green */
+  color: #15803d; /* Dark green */
+}
+.status-open .status-dot { background-color: #15803d; }
+
+.status-pending {
+  background-color: #fff7ed; /* Light orange */
+  color: #d97706; /* Orange */
+}
+.status-pending .status-dot { background-color: #d97706; }
+
+.status-inprogress {
+  background-color: #dbeafe; /* Light blue */
+  color: #1d4ed8; /* Blue */
+}
+.status-inprogress .status-dot { background-color: #1d4ed8; }
+
+.status-closed {
+  background-color: #fee2e2; /* Light red */
+  color: #b91c1c; /* Red */
+}
+.status-closed .status-dot { background-color: #b91c1c; }
+
+/* Inactive / disabled */
+.status-off {
+  opacity: 0.5;
+}
+
+/* Hover effect */
+.status-badge:hover {
+  transform: scale(1.05);
+}

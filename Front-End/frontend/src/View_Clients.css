@@ -1,0 +1,75 @@
+.layout {
+  display: flex;
+ margin-left:13%;
+
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-x: auto;
+  
+
+}
+
+.container {
+  padding: 10px;
+  overflow-x: hidden;
+   position: absolute;
+
+}
+
+.table-wrapper {
+
+  overflow: visible !important; /* Allow dropdowns or elements to spill out */
+  z-index: 999;
+}
+
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 100px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delete-btn {
+  background-color:  rgb(142, 16, 16);
+  color: white;
+}
+.actions .btn {
+  font-size: 14px;   /* smaller icon size */
+  padding: 6px 10px; /* less padding for icon buttons */
+  min-width: 40px;   /* smaller width for icon buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

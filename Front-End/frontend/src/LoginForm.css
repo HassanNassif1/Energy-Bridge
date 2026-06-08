@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+}
+
+.header {
+  background: #eeeeee;
+  padding: 20px;
+  text-align: center;
+}
+
+.header img {
+  width: 150px;
+}
+.login-box {
+  max-width: 32%;
+  min-height: 400px; /* fallback for small content */
+  margin:40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.Login-Title{
+    color: #c60000;
+    font-size: 28px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:20px 0px,
+  
+}
+h2 {
+  text-align: center;
+  color: #c60000;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #444;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background: #c60000;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background: #a50000;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 20px;
+  }
+}

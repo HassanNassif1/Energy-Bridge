@@ -1,0 +1,346 @@
+/* Each main link becomes a grey box */
+.main-link {
+  width: 100%;
+  margin: 8% 0;
+  font-family: Arial, sans-serif;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #e7e7e7b0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.main-link:hover {
+  background: #d0d0d0;
+}
+
+/* Active page highlight */
+.main-link.active {
+  background: #c60000;
+  color: white !important;
+   min-width: 100%;
+}
+
+/* Icon + Text wrapper */
+.main-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;  /* ⬅ space between icon and text */
+  font-size: 16px;
+height:auto;
+  font-weight: 500;
+  color: inherit;
+}
+
+/* Ensure icons follow active color */
+.main-item svg {
+  color: inherit;
+}
+/* -------------------------------
+   CREATIVE DROPDOWN (same design)
+--------------------------------*/
+
+
+
+.dropdown {
+  width: 100%;
+  position: relative;
+}
+
+/* Remove absolute positioning to prevent hover gaps */
+
+/* Show menu when hovering whole .dropdown block */
+.dropdown:hover .dropdown-content {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Rotate arrow when open */
+/* Hide dropdown by default */
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 40px;
+
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.dropdown-content.show {
+  max-height: 300px; /* enough to show children */
+  opacity: 1;
+}
+
+
+/* Arrow animation */
+.arrow {
+  margin-left: auto;
+  transition: transform 0.25s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown items styling */
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #e7e7e7b0;
+  color: #c60000 !important;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.dropdown .arrow {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+/* Hover effect for dropdown items */
+.dropdown-content a:hover {
+  background: #c60000;
+  color: #fff !important;
+  transform: translateX(5px);
+}
+
+.dropdown .arrow.open {
+  transform: rotate(180deg);
+}
+/* Fix logout button alignment if needed */
+.logout-btn {
+  background-color: #c60000;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  width: 90%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #9f0000;
+}
+
+.sidebar-profile-box {
+  display: flex;
+  align-items: center;
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 4px ;
+  margin: 15px 10px;
+  background-color: #c60000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  color: white;
+}
+
+.profile-icon {
+  background: #c60000;
+  padding: 1px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.profile-info {
+
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-text {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.username-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+/* Base navbar */
+.horizontal-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  flex-direction: row;
+  background-color: rgb(255,255,255);
+  z-index: 1000;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+}
+
+/* Links container */
+.horizontal-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 30px;
+  flex-wrap: nowrap;
+}
+
+/* Main links */
+.horizontal-links .main-link {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #c60000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+}
+
+.horizontal-links .main-link:hover {
+  color: rgb(238,123,123);
+  animation: wiggle 0.3s ease-in-out infinite;
+}
+
+/* Active link underline */
+.horizontal-links .main-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #c60000;
+}
+
+/* Dropdown wrapper */
+.horizontal-links .dropdown {
+  position: relative;
+}
+
+/* Dropdown content */
+.horizontal-links .dropdown-content {
+  position: absolute;
+  top: 100%; /* below parent link */
+  left: 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transform-origin: top center;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0.35s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  z-index: 9999;
+}
+
+/* Show dropdown on hover */
+.horizontal-links .dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition-delay: 0s;
+}
+
+/* Dropdown links */
+.horizontal-links .dropdown-content a {
+  color: #c60000 !important;
+  text-decoration: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 6px;
+}
+
+/* Dropdown link hover */
+.horizontal-links .dropdown-content a:hover {
+  background-color: #c60000;
+  color: white !important;
+  animation: wiggle 0.3s ease-in-out infinite;
+}
+
+/* Wiggle animation */
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Logout button */
+.logout-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c60000;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.logout-btn:hover {
+  color: rgb(238,123,123);
+}
+
+/* Username */
+.horizontal-username {
+  margin-left: 20px;
+  font-weight: bold;
+  color: #c60000;
+}
+
+/* Scrollbar for navbar (if many links) */
+.horizontal-navbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.horizontal-navbar::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 3px;
+}
+
+.horizontal-navbar::-webkit-scrollbar-thumb {
+  background: #c60000;
+  border-radius: 3px;
+}
+
+.horizontal-navbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(238,123,123);
+}

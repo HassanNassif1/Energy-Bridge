@@ -1,0 +1,21 @@
+.christmas-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+
+  /* Christmas gradient */
+  background: linear-gradient(
+    90deg,
+    #d62828,   /* Christmas red */
+    #8ac926,   /* Green */
+    #f4d35e,   /* Gold */
+    #8ac926,   /* Green */
+    #d62828    /* Red */
+  );
+
+  background-size: 400% 100%;
+  z-index: 9999;
+  pointer-events: none; /* does not block clicks */
+}

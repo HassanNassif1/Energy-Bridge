@@ -1,0 +1,31 @@
+server {
+    listen 80;
+    server_name gr.samalb.net;
+    return 301 https://$host$request_uri;   # redirect all HTTP to HTTPS
+}
+
+server {
+    listen 443 ssl;
+    server_name gr.samalb.net;
+
+    ssl_certificate     /etc/letsencrypt/live/gr.samalb.net/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/gr.samalb.net/privkey.pem;
+
+    # React frontend
+    root /var/www/react-app/build;
+    index index.html;
+
+    location / {
+        try_files $uri /index.html;
+    }
+
+    # API backend (.NET runs on 7207)
+    location /api/ {
+        proxy_pass         http://127.0.0.1:7207/;
+        proxy_http_version 1.1;
+        proxy_set_header   Upgrade $http_upgrade;
+        proxy_set_header   Connection keep-alive;
+        proxy_set_header   Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}

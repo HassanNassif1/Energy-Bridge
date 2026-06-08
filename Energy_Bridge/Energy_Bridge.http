@@ -1,0 +1,6 @@
+@Energy_Bridge_HostAddress = http://localhost:5201
+
+GET {{Energy_Bridge}}/weatherforecast/
+Accept: application/json
+
+###
